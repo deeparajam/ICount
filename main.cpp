@@ -49,6 +49,17 @@ int main(void)
 
 	IPD_log.open("IPD_log.txt");
 
+	/*
+	cout<<"Enter port number : ";
+	cin>>port_num;
+
+	if (port_num.length()>4)
+		port_num= "\\\\.\\" + port_num;
+
+	cout<<"Port num"<<port_num<<endl;
+
+	hSerialPort = openSerialPort(port_num.c_str(),B9600,one,off); */
+
 	hSerialPort = openSerialPort("COM3",B9600,one,off);
 
 	if(!initializeICount(hSerialPort))
